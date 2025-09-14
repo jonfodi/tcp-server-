@@ -37,7 +37,7 @@ const adtInbound = server.createInbound({ port: 3000 }, async (req, res) => {
         processed: true,
       });
 
-      // Send positive acknowledgment
+      console.log("Sending positive acknowledgment");
       await res.sendResponse("AA");
       console.log(`ADT message ${messageControlId} acknowledged successfully`);
     } else {
